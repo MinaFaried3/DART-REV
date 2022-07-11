@@ -25,11 +25,15 @@ class D extends C with B, A {
 }
 
 main() {
-  var d = D();
-  d.info();
-  //_____________________________________
-  var d1 = D1();
-  d1.info();
+//   var d = D();
+//   d.info();
+//   //_____________________________________
+//   var d1 = D1();
+//   d1.info();
+// //  _________________
+  B b = D();
+  b.info();
+  print(b.runtimeType);
 }
 
 mixin A1 {
@@ -50,4 +54,5 @@ class C1 {
 class D1 extends C1 with B1, A1 {
 //  when the mixin methods became abstract takes from c1
 //  when the first mixin method not abstract takes it
+
 }
