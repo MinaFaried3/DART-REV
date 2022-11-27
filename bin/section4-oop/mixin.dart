@@ -34,6 +34,10 @@ main() {
   B b = D();
   b.info();
   print(b.runtimeType);
+
+  if (b is A) {
+    print("b is a");
+  }
 }
 
 mixin A1 {

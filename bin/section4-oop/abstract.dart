@@ -1,26 +1,62 @@
-main() {
-  var c = C();
-  c.info();
-}
+void main() {
+  B ab = A();
 
-class B {
-  int x = 4;
-  info() {
-    print("interface b");
+  C ac = A();
+
+  if (ab is B && ac is C) {
+    print("ab is B && ac is C");
   }
 
-  B(this.x) {
-    print(this.x);
+  if (ab is C) {
+    print("ab is C");
+  }
+  if (ac is B) {
+    print("ac is B");
   }
 }
 
-class C implements B {
-  // interface dose not override in constructor
-  int x = 7;
+abstract class B {
+  void info();
+
+  void doThis();
+
+  B() {
+    print("B()");
+  }
+}
+
+abstract class C {
+  void info();
+
+  void doThat();
+
+  void trySuper() {
+    print("super C");
+  }
+
+  // The class 'C' can't be used as a mixin because it declares a constructor
+  // C() {
+  //   print("C()");
+  // }
+}
+
+class A extends B with C {
   @override
-  info() {
+  void info() {
     // TODO: implement info
-    //  we can't use the super.info()
-    // return super.info();
+  }
+
+  @override
+  void doThat() {}
+
+  @override
+  void doThis() {
+    // TODO: implement doThis
+  }
+
+  @override
+  void trySuper() {
+    // TODO: implement trySuper
+    super.trySuper();
   }
 }
