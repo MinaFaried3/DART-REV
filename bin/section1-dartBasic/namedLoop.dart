@@ -1,4 +1,4 @@
-main() {
+void main() {
   print(" named loop");
   int x = 1;
   // this trick give an name to loops to more control
