@@ -29,3 +29,26 @@ void describe<T>(T value) {
       break;
   }
 }
+
+void describe2(dynamic value) {
+  switch (value.runtimeType) {
+    case int:
+      print('This is an integer');
+      break;
+    case double:
+      print('This is a double');
+      break;
+    case String:
+      print('This is a string');
+      break;
+    case bool:
+      print('This is a boolean');
+      break;
+    case Map<String, String>:
+      print('This is a map');
+      break;
+    default:
+      print('This is something else');
+      break;
+  }
+}

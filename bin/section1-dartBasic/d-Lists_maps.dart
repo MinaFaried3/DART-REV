@@ -34,4 +34,7 @@ main() {
   map.forEach((key, value) {
     print("$key is $value");
   });
+
+  Set<int> set = {1, 2, 3, 4, 4, 4, 4, 0};
+  print(set);
 }
