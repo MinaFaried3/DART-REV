@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   const name = 'Foo';
   print(name);
@@ -34,4 +36,11 @@ void main() {
 
   const int age4 = 4;
   final age5 = age4;
+
+  const age6 = 12;
+  const age7 = 12;
+  print(age6.hashCode == age7.hashCode);
+
+  // const input = stdin.readLineSync();//error
+  final input = stdin.readLineSync();
 }

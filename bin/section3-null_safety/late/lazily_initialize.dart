@@ -1,4 +1,11 @@
 void main(List<String> args) {
+  print('Before');
+  late String name = provideName();
+  print('After');
+  print(name);
+
+  //---------------------------------------
+  print("//---------------");
   late final myValue = 10;
   print(myValue);
 
@@ -15,4 +22,9 @@ void main(List<String> args) {
 int getValue() {
   print('getValue called');
   return 10;
+}
+
+String provideName() {
+  print('Function is called');
+  return 'Foo Bar';
 }
