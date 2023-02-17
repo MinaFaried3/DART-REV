@@ -1,13 +1,13 @@
 main() {
-  print(Color);
-  print(Color.values);
-  var list = Color.values;
+  print(Color.values); //[Color.red, Color.blue, Color.black]
+  List<Color> list = Color.values;
 
   Color g = Color.blue;
-  info(g);
+  info(g); //blue
 }
 
 enum Color { red, blue, black }
+
 info(Color s) {
   switch (s) {
     case Color.red:
