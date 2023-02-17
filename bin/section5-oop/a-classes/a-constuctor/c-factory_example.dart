@@ -1,6 +1,6 @@
 class Reading {
   double value;
-  Reading({required double value}) : this.value = value;
+  Reading({required this.value});
 
   Reading.zero() : value = -999;
   factory Reading.fromServer(Map<String, Object> server) {
@@ -34,9 +34,8 @@ class Reading {
 
 class Temperature extends Reading {
   String city;
-  Temperature({required String city, required double reading})
-      : this.city = city,
-        super(value: reading);
+  Temperature({required this.city, required double reading})
+      : super(value: reading);
   Temperature.zero()
       : city = '',
         super(value: -999);
@@ -49,9 +48,8 @@ class Temperature extends Reading {
 
 class Pressure extends Reading {
   String objectTested;
-  Pressure({required String objectTested, required double reading})
-      : this.objectTested = objectTested,
-        super(value: reading);
+  Pressure({required this.objectTested, required double reading})
+      : super(value: reading);
   Pressure.zero()
       : objectTested = '',
         super(value: -999);
