@@ -4,10 +4,6 @@
  * some dart syntax tips and tricks to review
 
 
-- you can watch the course from here : https://www.udemy.com/course/mwurstui/
-
-- my certificate : https://udemy-certificate.s3.amazonaws.com/image/UC-13915c88-4795-440d-ba1d-8476e293a425.jpg
-
 <h3 align="left">Connect with me:</h3>
 click the icon to contact 👆 :
 <p align="left">
