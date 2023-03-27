@@ -12,6 +12,7 @@ mixin CanRun on Has2Feet {
   }
 }
 
+// class Human with CanRun { //error
 class Human extends Has2Feet with CanRun {
   const Human();
 }

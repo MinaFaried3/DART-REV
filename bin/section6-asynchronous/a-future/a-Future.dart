@@ -6,6 +6,7 @@ main() {
   fur2.then((value) {
     print(value);
   });
+
   var fur3 = Future.value(50);
   var fur4 = Future.delayed(
     Duration(seconds: 2),
