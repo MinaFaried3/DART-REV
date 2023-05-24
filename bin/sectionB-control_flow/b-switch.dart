@@ -21,7 +21,7 @@ void describe<T>(T value) {
     case bool:
       print('This is a boolean');
       break;
-    case Map<String, String>:
+    case const (Map<String, String>):
       print('This is a map');
       break;
     default:
@@ -44,7 +44,7 @@ void describe2(dynamic value) {
     case bool:
       print('This is a boolean');
       break;
-    case Map<String, String>:
+    case const (Map<String, String>):
       print('This is a map');
       break;
     default:

@@ -25,7 +25,8 @@ abstract class B {
   }
 }
 
-abstract class C {
+// abstract class C {
+mixin C {
   void info();
 
   void doThat();
@@ -34,10 +35,10 @@ abstract class C {
     print("super C");
   }
 
-  // The class 'C' can't be used as a mixin because it declares a constructor
-  // C() {
-  //   print("C()");
-  // }
+// The class 'C' can't be used as a mixin because it declares a constructor
+// C() {
+//   print("C()");
+// }
 }
 
 class A extends B with C {
