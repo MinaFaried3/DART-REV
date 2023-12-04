@@ -43,4 +43,8 @@ void main() {
 
   // const input = stdin.readLineSync();//error
   final input = stdin.readLineSync();
+
+  //dynamic
+  const dynamic age8 = 345;
+  print(age8);
 }
