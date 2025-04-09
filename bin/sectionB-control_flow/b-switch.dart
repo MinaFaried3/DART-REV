@@ -5,6 +5,16 @@ void main(List<String> args) {
   describe(true);
   describe({'key': 'value'});
   describe([1, 2, 3, 4]);
+
+  switch (4) {
+    case 4:
+      print(4);
+      continue four;
+    four:
+    case 3:
+      print(3);
+      break;
+  }
 }
 
 void describe<T>(T value) {

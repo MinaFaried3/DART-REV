@@ -11,4 +11,14 @@ void main() {
       break mina;
     }
   }
+
+  foo:
+  for (var i = 0; i < 20; i++) {
+    for (var x = 0; x < 10; x++) {
+      print("$i $x");
+      if(i == 5){
+        break foo;
+      }
+    }
+  }
 }

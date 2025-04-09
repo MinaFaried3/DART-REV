@@ -22,6 +22,7 @@ void main() {
 
   print(age << 20); // bitwise left shift
   print(age >> 20); // bitwise right shift
+  print(age << 2);
 
   /// 0110 0011
   /// shift left by 2
@@ -54,6 +55,7 @@ void main() {
   // print('Hello' + 2);
   var myAge = 20;
   print(myAge = 30); // myAge = 30
+  print(myAge);
   print(myAge ~/= 2); // 15
   print(myAge *= 2); // 30
   print(myAge += 4); // 34
