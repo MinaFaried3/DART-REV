@@ -5,6 +5,23 @@ class Person {
   Person(this.name, this.age);
 }
 
+Person? fromJson(Map<String, Object?> data) => switch (data) {
+      {'username': String pname, 'age': int page} when pname == 'mina' =>
+        Person(
+          pname,
+          page,
+        ),
+      _ => null,
+    };
+
+bool isMinaPerson(Object? object) {
+  if (object case Person(:var name) when name == 'mina') {
+    return true;
+  }
+
+  return false;
+}
+
 void main() {
   var list = [1, 2, 3];
   var [a, b, c] = list;
@@ -51,7 +68,7 @@ void main() {
 
   print("==class==");
 
-  Person person = Person("name", 23);
+  Person person = Person("mina", 23);
   //will order
   //notice it must be like the name of class
   var Person(:age, :name) = person;
@@ -62,4 +79,21 @@ void main() {
   var Person(age: agePerson, name: namePerson) = person;
   print(agePerson);
   print(namePerson);
+  print("==is==");
+
+  print(isMinaPerson(person));
+
+  var list1 = ['a', 'hello'];
+
+  switch (list1) {
+    case ['a', var second]:
+      print("Second element: $second"); // prints: hello
+    case ['b', _]:
+      print("Starts with b");
+    default:
+      print("No match");
+  }
+  print("\n ======================================= \n");
+
+  print("\n ======================================= \n");
 }
