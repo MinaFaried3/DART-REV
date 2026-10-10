@@ -1,3 +1,10 @@
+Iterable<int> numbers() sync* {
+  print('Generator started');
+  yield 1;
+  yield 2;
+}
+
+
 void main(List<String> args) {
   final iterable = Iterable.generate(
     20,
@@ -6,6 +13,14 @@ void main(List<String> args) {
   print(iterable);
   for (final name in iterable.take(2)) {
     print(name);
+  }
+
+  final values = numbers();
+
+  print('A');
+
+  for (final number in values) {
+    print(number);
   }
 }
 
