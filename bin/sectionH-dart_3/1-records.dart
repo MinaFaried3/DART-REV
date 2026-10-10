@@ -50,6 +50,47 @@ void main() {
   ({int x, int y}) p2 = (x: 1, y: 2);
   print("p1 == p2 = ${p1 == p2}");
 
+  // cannot assgined
+  // p1.x = 2;
+
   ({int g, int z}) p3 = (g: 1, z: 2);
   print("p1 == p3 = ${p1 == p3}");
+
+
+  print("++++++++++++++++++++++++++++++++++++++++++++swabed");
+  int m = 4;
+  int f = 3;
+
+  (m,f) = (f,m);
+  print(m);
+  print(f);
+  print("++++++++++++++++++++++++++++++++++++++++++++describePayment");
+  print(describePayment((status:200,amount:100)));
+  print("++++++++++++++++++++++++++++++++++++++++++++ response case");
+  final response = (status: 200, data: 'Success');
+
+  if (response case (status: 200, data: final value)) {
+    print(value);
+  }
+  print("++++++++++++++++++++++++++++++++++++++++++++ response case");
 }
+
+String describePayment(
+    ({int status, double amount}) payment,
+    ) {
+  return switch (payment) {
+    (status: == 200, amount: > 0) =>
+    'Payment successful',
+
+    (status: 400, amount: _) =>
+    'Invalid payment',
+
+    (status: 500, amount: _) =>
+    'Server error',
+
+    _ => 'Unknown status',
+  };
+
+
+}
+
