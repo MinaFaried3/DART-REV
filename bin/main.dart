@@ -1,21 +1,51 @@
-class Person {
-  final String name;
 
-  const Person(this.name);
+Function makeCounter() {
+  int count = 0;
 
-  factory Person.mina() => const Person('');
+  return () {
+    count++;
+    print(count);
+  };
 }
 
-main() {
-  const p1 = Person('');
-  const p4 = Person('');
-  var p3 = Person.mina();
-  Object v1;
+void main() {
+  final counter = makeCounter();
+  counter();
+  counter();
+  counter();
+  counter();
 
-  final pp = Person('');
+  print('==========================================;');
+  int count = 10;
 
-  print(p1.hashCode);
-  print(pp.hashCode);
-  print(p3.hashCode);
-  print(identical(p1, p4));
+  final printCount = () {
+    print(count);
+  };
+
+  count = 50;
+
+  printCount();
+  print('==========================================;');
+  List<void Function()> callbacks = <void Function()>[];
+
+  for (var i = 0; i < 3; i++) {
+    callbacks.add(() => print(i));
+  }
+
+  for (final callback in callbacks) {
+    callback();
+  }
+  print('==========================================;');
+  callbacks = <void Function()>[];
+
+  int i = 0;
+
+  for ( i = 0; i < 3; i++) {
+    callbacks.add(() => print(i));
+  }
+
+  for (final callback in callbacks) {
+    callback();
+  }
+  print('==========================================;');
 }

@@ -48,4 +48,16 @@ void main() {
     callback();
   }
   print('==========================================;');
+  callbacks = <void Function()>[];
+
+   i = 0;
+
+  for ( i = 0; i < 3; i++) {
+    callbacks.add(() => print(i));
+  }
+
+  for (final callback in callbacks) {
+    callback();
+  }
+  print('==========================================;');
 }
